@@ -10,6 +10,11 @@ public class Flower {
     public Flower() {
     }
 
+    public Flower(FlowerType flowerName) {
+        flowerType = flowerName;
+    }
+
+
     public void setColor(double color) {
         this.color = color;
     }

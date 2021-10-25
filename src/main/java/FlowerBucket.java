@@ -7,6 +7,10 @@ import java.util.List;
 public class FlowerBucket {
     public List<FlowerPack> flowerPackList = new ArrayList<>();
 
+    FlowerBucket(List<FlowerPack> flowers) {
+        this.flowerPackList = flowers;
+    }
+
     public double getPrice() {
         double price = 0;
         for (FlowerPack flowerPack: flowerPackList) {

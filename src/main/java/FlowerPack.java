@@ -3,6 +3,12 @@ import lombok.Setter;
 
 @Getter @Setter
 public class FlowerPack {
+    public FlowerPack(Flower flowerType) {
+        flower = flowerType;
+    }
+
+    public FlowerPack() {}
+
     public Flower getFlower() {
         return flower;
     }
