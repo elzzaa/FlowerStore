@@ -1,3 +1,7 @@
+package flowers;
+
+import flowers.Flower;
+import flowers.FlowerPack;
 import lombok.Getter;
 import lombok.Setter;
 

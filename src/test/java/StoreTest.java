@@ -1,3 +1,7 @@
+import flowers.Flower;
+import flowers.FlowerPack;
+import flowers.FlowerType;
+import flowers.Store;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +16,7 @@ class StoreTest {
     void setUp() {
         flower = new Flower(FlowerType.ROSE);
         store = new Store();
-        store.assortment = List.of(new FlowerPack(flower));
+        store.setAssortment(List.of(new FlowerPack(flower)));
     }
 
     @Test
