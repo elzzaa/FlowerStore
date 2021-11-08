@@ -1,8 +1,11 @@
+package order;
+
 import delivering.Delivery;
 import flowers.Item;
 import paying.Payment;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Order {
     LinkedList<Item> items;
@@ -36,4 +39,27 @@ public class Order {
 
     public boolean removeItem(Item item) {
         return items.remove(item);}
+
+    List<User> users;
+
+    public void addUser(User newUser){
+        users.add(newUser);
+        System.out.println("User was added.");
+    }
+
+    public void removeUser(User delUser) {
+        users.remove(delUser);
+        System.out.println("User was removed.");
+    }
+
+    void notifyUser() {
+        for (User user: users) {
+            User.update(true);
+        }
+    }
+
+    public void order(){
+        processOrder();
+        notifyUser();
+    }
 }
